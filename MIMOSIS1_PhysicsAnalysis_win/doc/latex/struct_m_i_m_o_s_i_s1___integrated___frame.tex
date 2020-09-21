@@ -1,0 +1,57 @@
+\hypertarget{struct_m_i_m_o_s_i_s1___integrated___frame}{}\doxysection{M\+I\+M\+O\+S\+I\+S1\+\_\+\+Integrated\+\_\+\+Frame Struct Reference}
+\label{struct_m_i_m_o_s_i_s1___integrated___frame}\index{MIMOSIS1\_Integrated\_Frame@{MIMOSIS1\_Integrated\_Frame}}
+
+
+Structure holding the compressed data of single run.  
+
+
+
+
+{\ttfamily \#include $<$data\+\_\+structure.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T\+H2D $\ast$ \mbox{\hyperlink{struct_m_i_m_o_s_i_s1___integrated___frame_af9bddddf1a859ae55ddd0ce7c3c6c4fe}{h2\+\_\+hit\+\_\+map}} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em main data storage -\/ integrated hit map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_m_i_m_o_s_i_s1___integrated___frame_ad1300f8b606ba55827cf77244ca10504}\label{struct_m_i_m_o_s_i_s1___integrated___frame_ad1300f8b606ba55827cf77244ca10504}} 
+T\+H2D {\bfseries h2\+\_\+hit\+\_\+map\+\_\+ob}
+\item 
+\mbox{\Hypertarget{struct_m_i_m_o_s_i_s1___integrated___frame_a4381d52acb21646a05c6f78ff13682f3}\label{struct_m_i_m_o_s_i_s1___integrated___frame_a4381d52acb21646a05c6f78ff13682f3}} 
+int \mbox{\hyperlink{struct_m_i_m_o_s_i_s1___integrated___frame_a4381d52acb21646a05c6f78ff13682f3}{nb\+\_\+of\+\_\+frames}} \{0\}
+\begin{DoxyCompactList}\small\item\em Number of aquired frames in run. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, int $>$ \mbox{\hyperlink{struct_m_i_m_o_s_i_s1___integrated___frame_a5af12a2b61935b78d27c53632917e352}{run\+\_\+param}}
+\begin{DoxyCompactList}\small\item\em List of run analysis parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure holding the compressed data of single run. 
+
+It is a internal data storage passed between Tree\+Reader and \mbox{\hyperlink{class_lab_test}{Lab\+Test}} 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_m_i_m_o_s_i_s1___integrated___frame_af9bddddf1a859ae55ddd0ce7c3c6c4fe}\label{struct_m_i_m_o_s_i_s1___integrated___frame_af9bddddf1a859ae55ddd0ce7c3c6c4fe}} 
+\index{MIMOSIS1\_Integrated\_Frame@{MIMOSIS1\_Integrated\_Frame}!h2\_hit\_map@{h2\_hit\_map}}
+\index{h2\_hit\_map@{h2\_hit\_map}!MIMOSIS1\_Integrated\_Frame@{MIMOSIS1\_Integrated\_Frame}}
+\doxysubsubsection{\texorpdfstring{h2\_hit\_map}{h2\_hit\_map}}
+{\footnotesize\ttfamily T\+H2D$\ast$ M\+I\+M\+O\+S\+I\+S1\+\_\+\+Integrated\+\_\+\+Frame\+::h2\+\_\+hit\+\_\+map \{nullptr\}}
+
+
+
+main data storage -\/ integrated hit map. 
+
+2-\/dim map corresponding to (part) pixel matrix. Each pixel holds the number of hits (fires) in N (=nb\+\_\+of\+\_\+frames) frames. \mbox{\Hypertarget{struct_m_i_m_o_s_i_s1___integrated___frame_a5af12a2b61935b78d27c53632917e352}\label{struct_m_i_m_o_s_i_s1___integrated___frame_a5af12a2b61935b78d27c53632917e352}} 
+\index{MIMOSIS1\_Integrated\_Frame@{MIMOSIS1\_Integrated\_Frame}!run\_param@{run\_param}}
+\index{run\_param@{run\_param}!MIMOSIS1\_Integrated\_Frame@{MIMOSIS1\_Integrated\_Frame}}
+\doxysubsubsection{\texorpdfstring{run\_param}{run\_param}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, int$>$ M\+I\+M\+O\+S\+I\+S1\+\_\+\+Integrated\+\_\+\+Frame\+::run\+\_\+param}
+
+
+
+List of run analysis parameters. 
+
+Stores the information about pulse high, threshold voltage and back bias values for this particular dataset 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{data__structure_8h}{data\+\_\+structure.\+h}}\end{DoxyCompactItemize}

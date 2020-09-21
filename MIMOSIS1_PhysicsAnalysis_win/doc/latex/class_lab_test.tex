@@ -1,0 +1,253 @@
+\hypertarget{class_lab_test}{}\doxysection{Lab\+Test Class Reference}
+\label{class_lab_test}\index{LabTest@{LabTest}}
+
+
+Loades the vector$<$\+M\+I\+M\+O\+S\+I\+S1\+\_\+\+Integrated\+\_\+\+Frame$>$ and performs physical analysis of the input data (S-\/curves, noise, threshold scans)  
+
+
+
+
+{\ttfamily \#include $<$Lab\+Test.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lab_test_a6babed4cf98abf96f419146fe11da51f}{Lab\+Test}} (std\+::vector$<$ \mbox{\hyperlink{struct_m_i_m_o_s_i_s1___integrated___frame}{M\+I\+M\+O\+S\+I\+S1\+\_\+\+Integrated\+\_\+\+Frame}} $>$ \&v\+\_\+\+M\+I\+M\+\_\+int\+\_\+frame, std\+::vector$<$ int $>$ \&\&v\+\_\+param\+\_\+values)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_lab_test_a3e6d4ec616f4ec334df8ba5d24d0c075}{Lab\+Test}} (std\+::vector$<$ \mbox{\hyperlink{struct_m_i_m_o_s_i_s1___integrated___frame}{M\+I\+M\+O\+S\+I\+S1\+\_\+\+Integrated\+\_\+\+Frame}} $>$ \&\&v\+\_\+\+M\+I\+M\+\_\+int\+\_\+frame, std\+::vector$<$ int $>$ \&\&v\+\_\+param\+\_\+values)
+\begin{DoxyCompactList}\small\item\em Overloaded constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lab_test_a4fa6d7f92e96f2ba204488b305f86423}{init}} (const char $\ast$config\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Mainly initialized class members. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_lab_test_aa451df041327bba0ce921c8c5056df3a}{open\+\_\+output\+\_\+tree}} ()
+\begin{DoxyCompactList}\small\item\em Opens R\+O\+OT tree with output results. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lab_test_a1052604c4ad94bc347af9cb3e97fafc2}{init\+\_\+histo}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the pointers to output histograms. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lab_test_af940138f4e1784a25b77e372048276ad}{copy\+\_\+integrated\+\_\+frames\+\_\+histos\+\_\+to\+\_\+output}} ()
+\begin{DoxyCompactList}\small\item\em Clones integrated hit maps from input data structure \mbox{\hyperlink{struct_m_i_m_o_s_i_s1___integrated___frame}{M\+I\+M\+O\+S\+I\+S1\+\_\+\+Integrated\+\_\+\+Frame}} into output histogram. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lab_test_a4a5254df28ba97ef0ee3fe7a5190eb64}{plot\+\_\+\+S\+\_\+curves}} ()
+\begin{DoxyCompactList}\small\item\em Creates T\+Graph for each pixel, fits E\+RF function, extracts parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lab_test_a629b42afef6276ca240846e69ef0217a}\label{class_lab_test_a629b42afef6276ca240846e69ef0217a}} 
+int \mbox{\hyperlink{class_lab_test_a629b42afef6276ca240846e69ef0217a}{close\+\_\+output\+\_\+tree}} ()
+\begin{DoxyCompactList}\small\item\em Write and closes output .root tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lab_test_aa5915768175652e00010d71f1befc57e}\label{class_lab_test_aa5915768175652e00010d71f1befc57e}} 
+std\+::vector$<$ \mbox{\hyperlink{struct_m_i_m_o_s_i_s1___integrated___frame}{M\+I\+M\+O\+S\+I\+S1\+\_\+\+Integrated\+\_\+\+Frame}} $>$ \mbox{\hyperlink{class_lab_test_aa5915768175652e00010d71f1befc57e}{\+\_\+v\+\_\+\+M\+I\+M\+\_\+int\+\_\+frame}}
+\begin{DoxyCompactList}\small\item\em Contains the vector of \mbox{\hyperlink{struct_m_i_m_o_s_i_s1___integrated___frame}{M\+I\+M\+O\+S\+I\+S1\+\_\+\+Integrated\+\_\+\+Frame}} structurea. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lab_test_a27506860b04dac37c89bfa5b07e85796}\label{class_lab_test_a27506860b04dac37c89bfa5b07e85796}} 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_lab_test_a27506860b04dac37c89bfa5b07e85796}{\+\_\+v\+\_\+param\+\_\+values}}
+\begin{DoxyCompactList}\small\item\em Default the vector of parameter (V\+PH, V\+BB, V\+TH) scan values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lab_test_a12d0fdf9fad14642594e203c7d88bfa1}\label{class_lab_test_a12d0fdf9fad14642594e203c7d88bfa1}} 
+T\+H2D $\ast$ \mbox{\hyperlink{class_lab_test_a12d0fdf9fad14642594e203c7d88bfa1}{h2\+\_\+noise\+\_\+sigma}}
+\begin{DoxyCompactList}\small\item\em 2-\/D map of each pixel sigma (noise, sigma of E\+RF fit) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lab_test_accd88a45a1deaca283ae49c1138ac42d}\label{class_lab_test_accd88a45a1deaca283ae49c1138ac42d}} 
+T\+H2D $\ast$ \mbox{\hyperlink{class_lab_test_accd88a45a1deaca283ae49c1138ac42d}{h2\+\_\+mu}}
+\begin{DoxyCompactList}\small\item\em 2-\/D map of each pixel mean (mean of E\+RF fit) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lab_test_aa3fe32f8a3b00fa7fb0f803b27386719}\label{class_lab_test_aa3fe32f8a3b00fa7fb0f803b27386719}} 
+T\+H2D $\ast$ \mbox{\hyperlink{class_lab_test_aa3fe32f8a3b00fa7fb0f803b27386719}{h2\+\_\+empty\+\_\+pix}}
+\begin{DoxyCompactList}\small\item\em 2-\/D map of pixel without data \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lab_test_acdf6ede98eb4603d1737d61342a33b18}\label{class_lab_test_acdf6ede98eb4603d1737d61342a33b18}} 
+T\+H2D $\ast$ \mbox{\hyperlink{class_lab_test_acdf6ede98eb4603d1737d61342a33b18}{h2\+\_\+badnoise\+\_\+pix}}
+\begin{DoxyCompactList}\small\item\em 2-\/D map of \char`\"{}bad\char`\"{} noise pixels (0.\+1 $<$ noise $>$ 10) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lab_test_ab2cbdfd0cf83c83cb8a31de396090f16}\label{class_lab_test_ab2cbdfd0cf83c83cb8a31de396090f16}} 
+T\+H2D $\ast$ \mbox{\hyperlink{class_lab_test_ab2cbdfd0cf83c83cb8a31de396090f16}{h2\+\_\+badmean\+\_\+pix}}
+\begin{DoxyCompactList}\small\item\em 2-\/D map of \char`\"{}bad\char`\"{} mean pixels (0 $<$ noise $>$ \+\_\+max\+\_\+param\+\_\+val) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lab_test_a841e1e725f13b76f4d43c574b62c6c33}\label{class_lab_test_a841e1e725f13b76f4d43c574b62c6c33}} 
+T\+H2D $\ast$ \mbox{\hyperlink{class_lab_test_a841e1e725f13b76f4d43c574b62c6c33}{h2\+\_\+not\+\_\+saturated\+\_\+pix}}
+\begin{DoxyCompactList}\small\item\em 2-\/D map of pixel that did not reach saturation \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lab_test_a0ebb72d2bf880c39b3bcfe5d08811556}\label{class_lab_test_a0ebb72d2bf880c39b3bcfe5d08811556}} 
+T\+H1D $\ast$ \mbox{\hyperlink{class_lab_test_a0ebb72d2bf880c39b3bcfe5d08811556}{h\+\_\+noise\+\_\+sigma}}
+\begin{DoxyCompactList}\small\item\em 1-\/D histo of pixel noise (from selected part of matrix) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lab_test_a8acc07ff41e7096810ccea85de8bbd64}\label{class_lab_test_a8acc07ff41e7096810ccea85de8bbd64}} 
+T\+H1D $\ast$ \mbox{\hyperlink{class_lab_test_a8acc07ff41e7096810ccea85de8bbd64}{h\+\_\+mu}}
+\begin{DoxyCompactList}\small\item\em 1-\/D histo of pixel mean (from selected part of matrix) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lab_test_a404de433ace2b7bdf709cef1af770a78}\label{class_lab_test_a404de433ace2b7bdf709cef1af770a78}} 
+T\+H1D $\ast$ \mbox{\hyperlink{class_lab_test_a404de433ace2b7bdf709cef1af770a78}{h\+\_\+scan\+\_\+values}}
+\begin{DoxyCompactList}\small\item\em 1-\/D histo scanned parameter values \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lab_test_a6a2e3caaa892e2813b5012d036b6f687}\label{class_lab_test_a6a2e3caaa892e2813b5012d036b6f687}} 
+T\+H2D $\ast$ {\bfseries test2}
+\item 
+\mbox{\Hypertarget{class_lab_test_ac35024bb6d5d3f44a1fa1d570c34a97a}\label{class_lab_test_ac35024bb6d5d3f44a1fa1d570c34a97a}} 
+T\+H2D $\ast$ \mbox{\hyperlink{class_lab_test_ac35024bb6d5d3f44a1fa1d570c34a97a}{test}}
+\begin{DoxyCompactList}\small\item\em test histo, ignore \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lab_test_acd5b47cda007c66325dc060f836fd026}\label{class_lab_test_acd5b47cda007c66325dc060f836fd026}} 
+T\+Multi\+Graph $\ast$ \mbox{\hyperlink{class_lab_test_acd5b47cda007c66325dc060f836fd026}{mg\+\_\+scurves}}
+\begin{DoxyCompactList}\small\item\em Multigraph of all S-\/curves with fits. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lab_test_a7b15649158939d2b4974780c4dbfb8a3}\label{class_lab_test_a7b15649158939d2b4974780c4dbfb8a3}} 
+T\+Multi\+Graph $\ast$ \mbox{\hyperlink{class_lab_test_a7b15649158939d2b4974780c4dbfb8a3}{mg\+\_\+sc\+\_\+badnoise}}
+\begin{DoxyCompactList}\small\item\em Multigraph of \char`\"{}bad\char`\"{} noise pixels S-\/curves with fits. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lab_test_a9f3b21c3953c197d52bcac142c35a1ca}\label{class_lab_test_a9f3b21c3953c197d52bcac142c35a1ca}} 
+T\+Multi\+Graph $\ast$ \mbox{\hyperlink{class_lab_test_a9f3b21c3953c197d52bcac142c35a1ca}{mg\+\_\+sc\+\_\+badmean}}
+\begin{DoxyCompactList}\small\item\em Multigraph of \char`\"{}bad\char`\"{} mean pixels S-\/curves with fits. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lab_test_a8deaf1db0fbbde360da86f6cf2bf2c88}\label{class_lab_test_a8deaf1db0fbbde360da86f6cf2bf2c88}} 
+T\+String \mbox{\hyperlink{class_lab_test_a8deaf1db0fbbde360da86f6cf2bf2c88}{\+\_\+scaned\+\_\+param}} \{\char`\"{}\char`\"{}\}
+\begin{DoxyCompactList}\small\item\em Name of the scaned parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lab_test_a2b6fb74d507365cc73760e3b08d5bfee}\label{class_lab_test_a2b6fb74d507365cc73760e3b08d5bfee}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{class_lab_test}{Lab\+Test}} \&treereader)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Loades the vector$<$\+M\+I\+M\+O\+S\+I\+S1\+\_\+\+Integrated\+\_\+\+Frame$>$ and performs physical analysis of the input data (S-\/curves, noise, threshold scans) 
+
+\begin{DoxyAuthor}{Author}
+Roma Bugiel 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+August 2020 
+\end{DoxyDate}
+\begin{DoxyPrecond}{Precondition}
+R\+O\+OT installation 
+\end{DoxyPrecond}
+\begin{DoxyWarning}{Warning}
+Exeception handling not added  This class is detector-\/independent. It needs a proper input format defined in \mbox{\hyperlink{data__structure_8h}{data\+\_\+structure.\+h}} to make a physics analysis of the data\+:
+\begin{DoxyItemize}
+\item S-\/\+Curves fitting
+\item noise extraction
+\item bad pixels finding
+\item saving the output data into .root tree 
+\end{DoxyItemize}
+\end{DoxyWarning}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_lab_test_a6babed4cf98abf96f419146fe11da51f}\label{class_lab_test_a6babed4cf98abf96f419146fe11da51f}} 
+\index{LabTest@{LabTest}!LabTest@{LabTest}}
+\index{LabTest@{LabTest}!LabTest@{LabTest}}
+\doxysubsubsection{\texorpdfstring{LabTest()}{LabTest()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Lab\+Test\+::\+Lab\+Test (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_m_i_m_o_s_i_s1___integrated___frame}{M\+I\+M\+O\+S\+I\+S1\+\_\+\+Integrated\+\_\+\+Frame}} $>$ \&}]{v\+\_\+\+M\+I\+M\+\_\+int\+\_\+frame,  }\item[{std\+::vector$<$ int $>$ \&\&}]{v\+\_\+param\+\_\+values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+Overloaded constructor  Takes parameters by reference. Initializes \mbox{\hyperlink{class_lab_test_aa5915768175652e00010d71f1befc57e}{\+\_\+v\+\_\+\+M\+I\+M\+\_\+int\+\_\+frame}} and \mbox{\hyperlink{class_lab_test_a27506860b04dac37c89bfa5b07e85796}{\+\_\+v\+\_\+param\+\_\+values}} class members 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \&v\+\_\+\+M\+I\+M\+\_\+int\+\_\+frame} & reference to S\+TL vector containing \mbox{\hyperlink{struct_m_i_m_o_s_i_s1___integrated___frame}{M\+I\+M\+O\+S\+I\+S1\+\_\+\+Integrated\+\_\+\+Frame}} ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em \&v\+\_\+param\+\_\+values} & reference to S\+TL vector containing scaned parameter values ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lab_test_a3e6d4ec616f4ec334df8ba5d24d0c075}\label{class_lab_test_a3e6d4ec616f4ec334df8ba5d24d0c075}} 
+\index{LabTest@{LabTest}!LabTest@{LabTest}}
+\index{LabTest@{LabTest}!LabTest@{LabTest}}
+\doxysubsubsection{\texorpdfstring{LabTest()}{LabTest()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Lab\+Test\+::\+Lab\+Test (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_m_i_m_o_s_i_s1___integrated___frame}{M\+I\+M\+O\+S\+I\+S1\+\_\+\+Integrated\+\_\+\+Frame}} $>$ \&\&}]{v\+\_\+\+M\+I\+M\+\_\+int\+\_\+frame,  }\item[{std\+::vector$<$ int $>$ \&\&}]{v\+\_\+param\+\_\+values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded constructor. 
+
+Takes parameters by R-\/value reference. Initializes \mbox{\hyperlink{class_lab_test_aa5915768175652e00010d71f1befc57e}{\+\_\+v\+\_\+\+M\+I\+M\+\_\+int\+\_\+frame}} and \mbox{\hyperlink{class_lab_test_a27506860b04dac37c89bfa5b07e85796}{\+\_\+v\+\_\+param\+\_\+values}} class members 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \&v\+\_\+\+M\+I\+M\+\_\+int\+\_\+frame} & R-\/value reference to S\+TL vector containing \mbox{\hyperlink{struct_m_i_m_o_s_i_s1___integrated___frame}{M\+I\+M\+O\+S\+I\+S1\+\_\+\+Integrated\+\_\+\+Frame}} ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em \&v\+\_\+param\+\_\+values} & R-\/value reference to S\+TL vector containing scaned parameter values ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lab_test_af940138f4e1784a25b77e372048276ad}\label{class_lab_test_af940138f4e1784a25b77e372048276ad}} 
+\index{LabTest@{LabTest}!copy\_integrated\_frames\_histos\_to\_output@{copy\_integrated\_frames\_histos\_to\_output}}
+\index{copy\_integrated\_frames\_histos\_to\_output@{copy\_integrated\_frames\_histos\_to\_output}!LabTest@{LabTest}}
+\doxysubsubsection{\texorpdfstring{copy\_integrated\_frames\_histos\_to\_output()}{copy\_integrated\_frames\_histos\_to\_output()}}
+{\footnotesize\ttfamily void Lab\+Test\+::copy\+\_\+integrated\+\_\+frames\+\_\+histos\+\_\+to\+\_\+output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clones integrated hit maps from input data structure \mbox{\hyperlink{struct_m_i_m_o_s_i_s1___integrated___frame}{M\+I\+M\+O\+S\+I\+S1\+\_\+\+Integrated\+\_\+\+Frame}} into output histogram. 
+
+It simply copies the integrated frame (F\+I\+R\+ED M\+I\+M\+O\+S\+I\+S1 format, integrated hit map) into the output root tree. It copies the maps to each loaded .root tree (so in the output maps there are integrated frames for each scanned parameter). \mbox{\Hypertarget{class_lab_test_a4fa6d7f92e96f2ba204488b305f86423}\label{class_lab_test_a4fa6d7f92e96f2ba204488b305f86423}} 
+\index{LabTest@{LabTest}!init@{init}}
+\index{init@{init}!LabTest@{LabTest}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Lab\+Test\+::init (\begin{DoxyParamCaption}\item[{const char $\ast$}]{config\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Mainly initialized class members. 
+
+Takes values from config\+\_\+file.\+cfg to intialize class variables. The name of variables in config file and class members are the same for simpilicity.
+
+Also finds the minimum and maximum scan value. \mbox{\Hypertarget{class_lab_test_a1052604c4ad94bc347af9cb3e97fafc2}\label{class_lab_test_a1052604c4ad94bc347af9cb3e97fafc2}} 
+\index{LabTest@{LabTest}!init\_histo@{init\_histo}}
+\index{init\_histo@{init\_histo}!LabTest@{LabTest}}
+\doxysubsubsection{\texorpdfstring{init\_histo()}{init\_histo()}}
+{\footnotesize\ttfamily void Lab\+Test\+::init\+\_\+histo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the pointers to output histograms. 
+
+The list of output histos\+:
+\begin{DoxyItemize}
+\item T\+H2\+D$\ast$ \mbox{\hyperlink{class_lab_test_a12d0fdf9fad14642594e203c7d88bfa1}{h2\+\_\+noise\+\_\+sigma}};
+\item T\+H2\+D$\ast$ \mbox{\hyperlink{class_lab_test_accd88a45a1deaca283ae49c1138ac42d}{h2\+\_\+mu}};
+\item T\+H2\+D$\ast$ \mbox{\hyperlink{class_lab_test_aa3fe32f8a3b00fa7fb0f803b27386719}{h2\+\_\+empty\+\_\+pix}};
+\item T\+H2\+D$\ast$ \mbox{\hyperlink{class_lab_test_acdf6ede98eb4603d1737d61342a33b18}{h2\+\_\+badnoise\+\_\+pix}};
+\item T\+H2\+D$\ast$ \mbox{\hyperlink{class_lab_test_ab2cbdfd0cf83c83cb8a31de396090f16}{h2\+\_\+badmean\+\_\+pix}};
+\item T\+H1\+D$\ast$ \mbox{\hyperlink{class_lab_test_a0ebb72d2bf880c39b3bcfe5d08811556}{h\+\_\+noise\+\_\+sigma}};
+\item T\+H1\+D$\ast$ \mbox{\hyperlink{class_lab_test_a8acc07ff41e7096810ccea85de8bbd64}{h\+\_\+mu}};
+\item T\+H1\+D$\ast$ \mbox{\hyperlink{class_lab_test_a404de433ace2b7bdf709cef1af770a78}{h\+\_\+scan\+\_\+values}};
+\item T\+H2\+D$\ast$ \#test2, $\ast$test;
+\item T\+Multi\+Graph $\ast$\mbox{\hyperlink{class_lab_test_acd5b47cda007c66325dc060f836fd026}{mg\+\_\+scurves}};
+\item T\+Multi\+Graph $\ast$\mbox{\hyperlink{class_lab_test_a7b15649158939d2b4974780c4dbfb8a3}{mg\+\_\+sc\+\_\+badnoise}};
+\item T\+Multi\+Graph $\ast$\mbox{\hyperlink{class_lab_test_a9f3b21c3953c197d52bcac142c35a1ca}{mg\+\_\+sc\+\_\+badmean}}; 
+\end{DoxyItemize}\mbox{\Hypertarget{class_lab_test_aa451df041327bba0ce921c8c5056df3a}\label{class_lab_test_aa451df041327bba0ce921c8c5056df3a}} 
+\index{LabTest@{LabTest}!open\_output\_tree@{open\_output\_tree}}
+\index{open\_output\_tree@{open\_output\_tree}!LabTest@{LabTest}}
+\doxysubsubsection{\texorpdfstring{open\_output\_tree()}{open\_output\_tree()}}
+{\footnotesize\ttfamily int Lab\+Test\+::open\+\_\+output\+\_\+tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Opens R\+O\+OT tree with output results. 
+
+The path to the output tree is given in config\+\_\+file.\+cfg. The name of the output tree is constructed as follows\+:
+
+\+\_\+output\+\_\+tree\+\_\+file\+\_\+core + \+\_\+ + param\+\_\+X + param\+\_\+\+X\+\_\+value + \+\_\+ + param\+\_\+Y + param\+\_\+\+Y\+\_\+value + \+\_\+ + param\+\_\+Z + \+\_\+ + \#\+\_\+min\+\_\+param\+\_\+val + \+\_\+ + \#\+\_\+max\+\_\+param\+\_\+val + .root
+
+where X, Y are the parameters that were fixed (not pointed by scan\+\_\+enable variable) and Z is the scaned parameter. \#\+\_\+min\+\_\+param\+\_\+val and \#\+\_\+max\+\_\+param\+\_\+val are resectively minimum and maximum scan values, found in \mbox{\hyperlink{class_lab_test_a4fa6d7f92e96f2ba204488b305f86423}{init}} method.
+
+\begin{DoxyReturn}{Returns}
+1 if succesfull, 0 if failed to open R\+O\+OT tree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lab_test_a4a5254df28ba97ef0ee3fe7a5190eb64}\label{class_lab_test_a4a5254df28ba97ef0ee3fe7a5190eb64}} 
+\index{LabTest@{LabTest}!plot\_S\_curves@{plot\_S\_curves}}
+\index{plot\_S\_curves@{plot\_S\_curves}!LabTest@{LabTest}}
+\doxysubsubsection{\texorpdfstring{plot\_S\_curves()}{plot\_S\_curves()}}
+{\footnotesize\ttfamily void Lab\+Test\+::plot\+\_\+\+S\+\_\+curves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates T\+Graph for each pixel, fits E\+RF function, extracts parameters. 
+
+For each pixel the T\+Graph of number of entries vs scanned parameter value is created. For each T\+Graph the error function\+:
+
+\begin{eqnarray*} f(x) = \frac{1}{2} \cdot N \cdot TMath::Erf(\frac{x - \mu}{\sqrt{2}\cdot \sigma}) \end{eqnarray*}
+
+is fitted and noise ( $ \sigma $) and mean ( $ \mu $) are passed to proper output histograms.
+
+There are two conditions that fit is not proper\+: 0.\+1 $<$ noise $\vert$$\vert$ noise $>$ 10 0 $<$ mean $\vert$$\vert$ mean $>$ \#\+\_\+max\+\_\+param\+\_\+val
+
+If fit parameters do not match this condition, the fit procedure is repeated and conditions are verified once more. Is still fails, the pixel is added to \char`\"{}bad\char`\"{} noise or \char`\"{}bad\char`\"{} mean control plots.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]maybe bottom condition should be changed !! \end{DoxyRefDesc}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]better validation of bad fit pixels should be added \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_lab_test_8h}{Lab\+Test.\+h}}\item 
+Lab\+Test.\+cpp\end{DoxyCompactItemize}
